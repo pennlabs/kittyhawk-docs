@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IngressProps | @pennlabs/kittyhawk</title>
+	<title>HostRules | @pennlabs/kittyhawk</title>
 	<meta name="description" content="Documentation for @pennlabs/kittyhawk">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -59,10 +59,10 @@
 					<a href="../modules/_ingress_.html">&quot;ingress&quot;</a>
 				</li>
 				<li>
-					<a href="_ingress_.ingressprops.html">IngressProps</a>
+					<a href="_ingress_.hostrules.html">HostRules</a>
 				</li>
 			</ul>
-			<h1>Interface IngressProps</h1>
+			<h1>Interface HostRules</h1>
 		</div>
 	</div>
 </header>
@@ -73,12 +73,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">IngressProps</span>
-						<ul class="tsd-hierarchy">
-							<li>
-								<a href="_application_.applicationprops.html" class="tsd-signature-type">ApplicationProps</a>
-							</li>
-						</ul>
+						<span class="target">HostRules</span>
 					</li>
 				</ul>
 			</section>
@@ -89,8 +84,9 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ingress_.ingressprops.html#ingress" class="tsd-kind-icon">ingress</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ingress_.ingressprops.html#port" class="tsd-kind-icon">port</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ingress_.hostrules.html#host" class="tsd-kind-icon">host</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ingress_.hostrules.html#issubdomain" class="tsd-kind-icon">is<wbr>Subdomain</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ingress_.hostrules.html#paths" class="tsd-kind-icon">paths</a></li>
 							</ul>
 						</section>
 					</div>
@@ -99,43 +95,48 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="ingress" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> ingress</h3>
-					<div class="tsd-signature tsd-kind-icon">ingress<span class="tsd-signature-symbol">:</span> <a href="_ingress_.hostrules.html" class="tsd-signature-type">HostRules</a><span class="tsd-signature-symbol">[]</span></div>
+					<a name="host" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> host</h3>
+					<div class="tsd-signature tsd-kind-icon">host<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/ingress.ts:18</li>
+							<li>Defined in src/ingress.ts:25</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>A list of host rules used to configure the Ingress.</p>
+							<p>The domain for the ingress.</p>
 						</div>
-						<dl class="tsd-comment-tags">
-							<dt>default</dt>
-							<dd><p>undefined</p>
-							</dd>
-						</dl>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="port" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> port</h3>
-					<div class="tsd-signature tsd-kind-icon">port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<a name="issubdomain" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> is<wbr>Subdomain</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Subdomain<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/ingress.ts:11</li>
+							<li>Defined in src/ingress.ts:35</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>External port.</p>
+							<p>If the host is a subdomain.</p>
 						</div>
-						<dl class="tsd-comment-tags">
-							<dt>default</dt>
-							<dd><p>80</p>
-							</dd>
-						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="paths" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> paths</h3>
+					<div class="tsd-signature tsd-kind-icon">paths<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/ingress.ts:30</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Paths on the domain that the application should be avaiable.</p>
+						</div>
 					</div>
 				</section>
 			</section>
@@ -192,24 +193,27 @@
 					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="../classes/_ingress_.ingress.html" class="tsd-kind-icon">Ingress</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="_ingress_.hostrules.html" class="tsd-kind-icon">Host<wbr>Rules</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="_ingress_.ingressprops.html" class="tsd-kind-icon">Ingress<wbr>Props</a>
+						<a href="_ingress_.hostrules.html" class="tsd-kind-icon">Host<wbr>Rules</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_ingress_.ingressprops.html#ingress" class="tsd-kind-icon">ingress</a>
+								<a href="_ingress_.hostrules.html#host" class="tsd-kind-icon">host</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_ingress_.ingressprops.html#port" class="tsd-kind-icon">port</a>
+								<a href="_ingress_.hostrules.html#issubdomain" class="tsd-kind-icon">is<wbr>Subdomain</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_ingress_.hostrules.html#paths" class="tsd-kind-icon">paths</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="_ingress_.ingressprops.html" class="tsd-kind-icon">Ingress<wbr>Props</a>
+					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="../modules/_ingress_.html#domaintocertname" class="tsd-kind-icon">domain<wbr>ToCert<wbr>Name</a>
 					</li>

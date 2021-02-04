@@ -93,7 +93,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_application_.djangoapplicationprops.html#cmd" class="tsd-kind-icon">cmd</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited"><a href="_application_.djangoapplicationprops.html#containerport" class="tsd-kind-icon">container<wbr>Port</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_application_.djangoapplicationprops.html#djangosettingsmodule" class="tsd-kind-icon">django<wbr>Settings<wbr>Module</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_application_.djangoapplicationprops.html#domain" class="tsd-kind-icon">domain</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_application_.djangoapplicationprops.html#domains" class="tsd-kind-icon">domains</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_application_.djangoapplicationprops.html#extraenv" class="tsd-kind-icon">extra<wbr>Env</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_application_.djangoapplicationprops.html#image" class="tsd-kind-icon">image</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_application_.djangoapplicationprops.html#ingress" class="tsd-kind-icon">ingress</a></li>
@@ -185,7 +185,7 @@
 					<div class="tsd-signature tsd-kind-icon">django<wbr>Settings<wbr>Module<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/application.ts:65</li>
+							<li>Defined in src/application.ts:67</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -195,9 +195,9 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="domain" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> domain</h3>
-					<div class="tsd-signature tsd-kind-icon">domain<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="domains" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> domains</h3>
+					<div class="tsd-signature tsd-kind-icon">domains<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>host<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>isSubdomain<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in src/application.ts:55</li>
@@ -205,7 +205,7 @@
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Domain of the application.</p>
+							<p>List of domain(s) of the application and if they are a subdomain.</p>
 						</div>
 					</div>
 				</section>
@@ -249,7 +249,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="ingress" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> ingress</h3>
-					<div class="tsd-signature tsd-kind-icon">ingress<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>host<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>paths<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">[]</span></div>
+					<div class="tsd-signature tsd-kind-icon">ingress<span class="tsd-signature-symbol">:</span> <a href="_ingress_.hostrules.html" class="tsd-signature-type">HostRules</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_ingress_.ingressprops.html">IngressProps</a>.<a href="_ingress_.ingressprops.html#ingress">ingress</a></p>
 						<ul>
@@ -269,17 +269,22 @@
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="ingresspaths" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> ingress<wbr>Paths</h3>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> ingress<wbr>Paths</h3>
 					<div class="tsd-signature tsd-kind-icon">ingress<wbr>Paths<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/application.ts:60</li>
+							<li>Defined in src/application.ts:62</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Just the list of paths passed to the ingress since we already know the host.</p>
+							<p>Just the list of paths passed to the ingress since we already know the host. Optional.</p>
 						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>undefined</p>
+							</dd>
+						</dl>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
@@ -522,7 +527,7 @@
 								<a href="_application_.djangoapplicationprops.html#djangosettingsmodule" class="tsd-kind-icon">django<wbr>Settings<wbr>Module</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_application_.djangoapplicationprops.html#domain" class="tsd-kind-icon">domain</a>
+								<a href="_application_.djangoapplicationprops.html#domains" class="tsd-kind-icon">domains</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="_application_.djangoapplicationprops.html#extraenv" class="tsd-kind-icon">extra<wbr>Env</a>
@@ -567,7 +572,7 @@
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="_application_.reactapplicationprops.html" class="tsd-kind-icon">React<wbr>Application<wbr>Props</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="../modules/_application_.html#insertifnotpresent" class="tsd-kind-icon">insert<wbr>IfNot<wbr>Present</a>
 					</li>
 				</ul>
