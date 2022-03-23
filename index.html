@@ -7,6 +7,7 @@
 	<meta name="description" content="Documentation for @pennlabs/kittyhawk">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
 </head>
 <body>
 <header>
@@ -40,8 +41,6 @@
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
 							<input type="checkbox" id="tsd-filter-externals" checked />
 							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -51,11 +50,6 @@
 	</div>
 	<div class="tsd-page-title">
 		<div class="container">
-			<ul class="tsd-breadcrumb">
-				<li>
-					<a href="globals.html">Globals</a>
-				</li>
-			</ul>
 			<h1>@pennlabs/kittyhawk</h1>
 		</div>
 	</div>
@@ -70,95 +64,177 @@
 				<p>Kittyhawk is the automated Kubernetes YAML generator for Penn Labs.
 				With Kittyhawk, you can define an application&#39;s deployment configuration in Typescript using objects called <a href="https://cdk8s.io/docs/v1.0.0-beta.3/concepts/constructs/">constructs</a>.</p>
 				<a href="#getting-started" id="getting-started" style="color: inherit; text-decoration: none;">
-					<h2>Getting Started</h2>
+					<h1>Getting Started</h1>
 				</a>
-				<p>The easiest way to get started is by creating a <code>k8s</code> folder in your project, and copying the <a href="https://github.com/pennlabs/kittyhawk-template">Kittyhawk starter code</a> inside. You will also need to add the circleCI orb (WIP) to your <code>.circleci/config.yml</code></p>
-				<p>To initialize the project, run <code>yarn install</code> </p>
-				<p>Next, write your configuration in the <code>buildChart</code> function in the <code>main.ts</code> file. Check the <a href="API.md">API docs</a> for a list of available properties. </p>
-				<p>You can now run <code>yarn run build</code> to try to synthesize your configuration. The generated YAML will be saved to a file located at <code>k8s/dist/kittyhawk.k8s.yaml</code>. You should not commit this file. On every push, CircleCI will automatically generate the YAML configuration. On every push to the master branch, CircleCI will also automatically deploy the generated YAML to production.</p>
-				<a href="#examples" id="examples" style="color: inherit; text-decoration: none;">
-					<h2>Examples</h2>
+				<p>The easiest way to get started with a Kittyhawk project is by following the following steps or by copying one of our existing products. At the end of this README, you can also see a simple example typescript file using Kittyhawk.</p>
+				<a href="#1-set-up-cdk8s-typescript-project" id="1-set-up-cdk8s-typescript-project" style="color: inherit; text-decoration: none;">
+					<h2>1. Set up CDK8s Typescript Project</h2>
 				</a>
-				<p>This is a sample configuration deploying a Django Application and a React Application for Penn Clubs:</p>
-				<pre><code><span class="hljs-keyword">import</span> { DjangoApplication, ReactApplication, synth } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@pennlabs/kittyhawk&#x27;</span>;
-<span class="hljs-keyword">import</span> { Construct } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;constructs&#x27;</span>; 
-
-<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">buildChart</span>(<span class="hljs-params">scope: Construct</span>) </span>{
-
-  <span class="hljs-comment">/** This creates a Django Application named django-asgi **/</span>
-  <span class="hljs-keyword">new</span> DjangoApplication(scope, <span class="hljs-string">&#x27;django-asgi&#x27;</span>, {
-    <span class="hljs-attr">image</span>: <span class="hljs-string">&#x27;pennlabs/penn-clubs-backend&#x27;</span>,
-    <span class="hljs-attr">secret</span>: <span class="hljs-string">&#x27;penn-clubs&#x27;</span>,
-    <span class="hljs-attr">cmd</span>: [<span class="hljs-string">&#x27;/usr/local/bin/asgi-run&#x27;</span>],
-    <span class="hljs-attr">replicas</span>: <span class="hljs-number">2</span>,
-    <span class="hljs-attr">domain</span>: <span class="hljs-string">&#x27;pennclubs.com&#x27;</span>,
-    <span class="hljs-attr">ingressPaths</span>: [<span class="hljs-string">&#x27;/api/ws&#x27;</span>],
-    <span class="hljs-attr">djangoSettingsModule</span>: <span class="hljs-string">&#x27;pennclubs.settings.production&#x27;</span>,
-    <span class="hljs-attr">extraEnv</span>: [
-      { <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;REDIS_HOST&#x27;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;penn-clubs-redis&#x27;</span> }],
-  })
-
-  <span class="hljs-comment">/** This creates a React Application named react **/</span>
-  <span class="hljs-keyword">new</span> ReactApplication(scope, <span class="hljs-string">&#x27;react&#x27;</span>, {
-    <span class="hljs-attr">image</span>: <span class="hljs-string">&#x27;pennlabs/penn-clubs-frontend&#x27;</span>,
-    <span class="hljs-attr">replicas</span>: <span class="hljs-number">2</span>,
-    <span class="hljs-attr">domain</span>: <span class="hljs-string">&#x27;pennclubs.com&#x27;</span>,
-    <span class="hljs-attr">ingressPaths</span>: [<span class="hljs-string">&#x27;/&#x27;</span>],
-    <span class="hljs-attr">portEnv</span>: <span class="hljs-string">&#x27;80&#x27;</span>,
-  })
-
-}
-
-<span class="hljs-comment">// Synthesizes the chart</span>
-synth(buildChart);
+				<p>Create a <code>k8s</code> folder within your project. Inside the <code>k8s</code> folder, initialize a <code>cdk8s</code> typescript project. You can do that by following the official cdk8s instructions <a href="https://cdk8s.io/docs/latest/getting-started/#new-project">here</a>. </p>
+				<a href="#2-add-kittyhawk" id="2-add-kittyhawk" style="color: inherit; text-decoration: none;">
+					<h2>2. Add Kittyhawk</h2>
+				</a>
+				<p>Import the kittyhawk library (<code>yarn add @pennlabs/kittyhawk</code>) and start writing your deployment configuration in Typescript.</p>
+				<p>At the very top level, add to your <code>main.ts</code> file in the following format using the <code>PennLabsChart</code>. </p>
+				<pre><code><span style="color: #AF00DB">export</span><span style="color: #000000"> </span><span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">MyChart</span><span style="color: #000000"> </span><span style="color: #0000FF">extends</span><span style="color: #000000"> </span><span style="color: #267F99">PennLabsChart</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">constructor</span><span style="color: #000000">(</span><span style="color: #001080">scope</span><span style="color: #000000">: </span><span style="color: #267F99">Construct</span><span style="color: #000000">, </span><span style="color: #001080">id</span><span style="color: #000000">: </span><span style="color: #267F99">string</span><span style="color: #000000">) {</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">super</span><span style="color: #000000">(</span><span style="color: #001080">scope</span><span style="color: #000000">, </span><span style="color: #001080">id</span><span style="color: #000000">);</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">}</span>
 </code></pre>
-				<p>The <a href="https://github.com/pennlabs/tfegame">tfegame repository</a> contains another example of an application deployed with Kittyhawk. Finally, the <code>test/integration/</code> directory contains many examples of current Penn Labs product configurations written with Kittyhawk.</p>
+				<p>Within your chart, you can add various applications, cronjobs, and other configurations supported by kittyhawk, including the following custom constructs:</p>
+				<ul>
+					<li><code>ReactApplication</code></li>
+					<li><code>DjangoApplication</code></li>
+					<li><code>CronJob</code></li>
+					<li><code>Redis</code></li>
+				</ul>
+				<p>For more advanced custom constructs, please refer to our <a href="https://kittyhawk.pennlabs.org/">documentation</a></p>
+				<a href="#cron-time-generator" id="cron-time-generator" style="color: inherit; text-decoration: none;">
+					<h3>Cron-time-generator</h3>
+				</a>
+				<p>In many of our Penn Labs products, we use cronjobs to simplify our product tasks (e.g. loading courses, calculating office hours wait time).  </p>
+				<p><code>cron-time-generator</code> (<a href="https://www.npmjs.com/package/cron-time-generator">npm link</a>) is a package that allows for intuitive generation of cron job time expressions. </p>
+				<p>It is not required to use this, but it is a dependency for kittyhawk and better practice: instead of specifying the time of a cronjob that runs every 5 minutes as <code>*/5 * * * *</code>, you can say <code>cronTime.every(5).minutes()</code>. </p>
+				<p>For specifics of using <code>cron-time-generator</code>, refer to the documentation on npm or our code example at the bottom of this doc.</p>
+				<a href="#3-incorporate-kittyhawk-into-ci" id="3-incorporate-kittyhawk-into-ci" style="color: inherit; text-decoration: none;">
+					<h2>3. Incorporate Kittyhawk into CI</h2>
+				</a>
+				<p>After the typescript constructs have been added and configured, the deployment yaml can be generated. </p>
+				<a href="#how-yaml-generation-works-command-line" id="how-yaml-generation-works-command-line" style="color: inherit; text-decoration: none;">
+					<h3>How yaml generation works (command line)</h3>
+				</a>
+				<blockquote>
+					<p><strong>Note</strong>: You should <em>NOT</em> be generating yaml manually and adding the generated yaml to the repository. Instead, it&#39;s important to add the yaml generation to the github actions or the CI you have already built. </p>
+				</blockquote>
+				<p>The following instructions are for <em>local testing purposes only</em> and if you want to understand what goes on under the hood.</p>
+				<p>To generate a yaml file, you must first change (<code>cd</code>) into the <code>k8s/cdk</code> directory. Then, you can generate the yaml by running <code>yarn compile &amp;&amp; yarn synth</code>. The generated yaml file would appear in the <code>dist</code> folder (<code>RELEASE_NAME.k8s.yaml</code>). </p>
+				<blockquote>
+					<p>For yaml generation to work properly, it&#39;s required to specify the following environment variables:</p>
+					<ul>
+						<li><code>RELEASE_NAME</code>: the name of the application being deploy (set to name of repository)</li>
+						<li><code>GIT_SHA</code>: the sha of the latest commit</li>
+					</ul>
+				</blockquote>
+				<a href="#adding-kittyhawk-to-the-ci" id="adding-kittyhawk-to-the-ci" style="color: inherit; text-decoration: none;">
+					<h3>Adding Kittyhawk to the CI</h3>
+				</a>
+				<p>The deploy job (<code>DeployJob</code>) in <a href="https://github.com/pennlabs/infrastructure/tree/master/cdk/kraken">Kraken</a> would handle the yaml file generation process. For more information, see the <a href="https://kraken.pennlabs.org/">kraken documentation</a>.</p>
+				<a href="#example" id="example" style="color: inherit; text-decoration: none;">
+					<h2>Example</h2>
+				</a>
+				<p>A sample <code>main.ts</code> file is included below, covering the more common use cases for Penn Labs products:</p>
+				<pre><code><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">Construct</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;constructs&#039;</span><span style="color: #000000">;</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">PennLabsChart</span><span style="color: #000000">, </span><span style="color: #001080">ReactApplication</span><span style="color: #000000">, </span><span style="color: #001080">DjangoApplication</span><span style="color: #000000">, </span><span style="color: #001080">RedisApplication</span><span style="color: #000000">, </span><span style="color: #001080">CronJob</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@pennlabs/kittyhawk&#039;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">cronTime</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;cron-time-generator&#039;</span><span style="color: #000000">);</span>
+
+<span style="color: #AF00DB">export</span><span style="color: #000000"> </span><span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">ExampleChart</span><span style="color: #000000"> </span><span style="color: #0000FF">extends</span><span style="color: #000000"> </span><span style="color: #267F99">PennLabsChart</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">constructor</span><span style="color: #000000">(</span><span style="color: #001080">scope</span><span style="color: #000000">: </span><span style="color: #267F99">Construct</span><span style="color: #000000">, </span><span style="color: #001080">id</span><span style="color: #000000">: </span><span style="color: #267F99">string</span><span style="color: #000000">) {</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">super</span><span style="color: #000000">(</span><span style="color: #001080">scope</span><span style="color: #000000">, </span><span style="color: #001080">id</span><span style="color: #000000">);</span>
+
+<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">backendImage</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;pennlabs/example-backend&#039;</span><span style="color: #000000">;</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">frontendImage</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;pennlabs/examplefrontend&#039;</span><span style="color: #000000">;</span>
+
+<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">secret</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;secret&#039;</span><span style="color: #000000">;</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">domain</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;domain&#039;</span><span style="color: #000000">;</span>
+
+<span style="color: #000000">    </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">RedisApplication</span><span style="color: #000000">(</span><span style="color: #0000FF">this</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;redis&#039;</span><span style="color: #000000">, {});</span>
+
+<span style="color: #000000">    </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">DjangoApplication</span><span style="color: #000000">(</span><span style="color: #0000FF">this</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;django-asgi&#039;</span><span style="color: #000000">, {</span>
+<span style="color: #000000">      </span><span style="color: #001080">deployment:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">        </span><span style="color: #001080">image:</span><span style="color: #000000"> </span><span style="color: #001080">backendImage</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">cmd:</span><span style="color: #000000"> [</span><span style="color: #A31515">&#039;/usr/local/bin/asgi-run&#039;</span><span style="color: #000000">],</span>
+<span style="color: #000000">        </span><span style="color: #001080">replicas:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">secret:</span><span style="color: #000000"> </span><span style="color: #001080">secret</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">env:</span><span style="color: #000000"> [</span>
+<span style="color: #000000">          { </span><span style="color: #001080">name:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;REDIS_HOST&#039;</span><span style="color: #000000">, </span><span style="color: #001080">value:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;redis&#039;</span><span style="color: #000000"> },</span>
+<span style="color: #000000">        ],</span>
+<span style="color: #000000">      },</span>
+<span style="color: #000000">      </span><span style="color: #001080">djangoSettingsModule:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;example.settings.production&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">      </span><span style="color: #001080">domains:</span><span style="color: #000000"> [{ </span><span style="color: #001080">host:</span><span style="color: #000000"> </span><span style="color: #001080">domain</span><span style="color: #000000">, </span><span style="color: #001080">paths:</span><span style="color: #000000"> [</span><span style="color: #A31515">&#039;/api/ws&#039;</span><span style="color: #000000">] }],</span>
+<span style="color: #000000">    });</span>
+
+<span style="color: #000000">    </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">ReactApplication</span><span style="color: #000000">(</span><span style="color: #0000FF">this</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;react&#039;</span><span style="color: #000000">, {</span>
+<span style="color: #000000">      </span><span style="color: #001080">deployment:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">        </span><span style="color: #001080">image:</span><span style="color: #000000"> </span><span style="color: #001080">frontendImage</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">replicas:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">,</span>
+<span style="color: #000000">      },</span>
+<span style="color: #000000">      </span><span style="color: #001080">domain:</span><span style="color: #000000"> { </span><span style="color: #001080">host:</span><span style="color: #000000"> </span><span style="color: #001080">domain</span><span style="color: #000000">, </span><span style="color: #001080">paths:</span><span style="color: #000000"> [</span><span style="color: #A31515">&#039;/&#039;</span><span style="color: #000000">] },</span>
+<span style="color: #000000">      </span><span style="color: #001080">portEnv:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;80&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    });</span>
+
+<span style="color: #000000">    </span><span style="color: #008000">/** Cronjobs **/</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">CronJob</span><span style="color: #000000">(</span><span style="color: #0000FF">this</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;example-cronjob&#039;</span><span style="color: #000000">, {</span>
+<span style="color: #000000">      </span><span style="color: #001080">schedule:</span><span style="color: #000000"> </span><span style="color: #001080">cronTime</span><span style="color: #000000">.</span><span style="color: #795E26">everyDayAt</span><span style="color: #000000">(</span><span style="color: #098658">8</span><span style="color: #000000">),</span>
+<span style="color: #000000">      </span><span style="color: #001080">image:</span><span style="color: #000000"> </span><span style="color: #001080">backendImage</span><span style="color: #000000">,</span>
+<span style="color: #000000">      </span><span style="color: #001080">secret:</span><span style="color: #000000"> </span><span style="color: #001080">secret</span><span style="color: #000000">,</span>
+<span style="color: #000000">      </span><span style="color: #001080">cmd:</span><span style="color: #000000"> [</span><span style="color: #A31515">&#039;your&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;command&#039;</span><span style="color: #000000">],</span>
+<span style="color: #000000">    });</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">}</span>
+</code></pre>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
-					<li class="globals  ">
-						<a href="globals.html"><em>Globals</em></a>
+					<li class=" ">
+						<a href="modules.html">Modules</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/_application_.html">&quot;application&quot;</a>
+						<a href="modules/application.html">application</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/_autoscaler_.html">&quot;autoscaler&quot;</a>
+						<a href="modules/application_base.html">application/base</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/_certificate_.html">&quot;certificate&quot;</a>
+						<a href="modules/application_django.html">application/django</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/_chart_.html">&quot;chart&quot;</a>
+						<a href="modules/application_react.html">application/react</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/_container_.html">&quot;container&quot;</a>
+						<a href="modules/application_redis.html">application/redis</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/_cronjob_.html">&quot;cronjob&quot;</a>
+						<a href="modules/certificate.html">certificate</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/_deployment_.html">&quot;deployment&quot;</a>
+						<a href="modules/chart.html">chart</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/_imports_acme_cert_manager_io_.html">&quot;imports/acme.cert-<wbr>manager.io&quot;</a>
+						<a href="modules/container.html">container</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/_imports_cert_manager_io_.html">&quot;imports/cert-<wbr>manager.io&quot;</a>
+						<a href="modules/cronjob.html">cronjob</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/_imports_k8s_.html">&quot;imports/k8s&quot;</a>
+						<a href="modules/deployment.html">deployment</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/_index_.html">&quot;index&quot;</a>
+						<a href="modules/imports_acme_cert_manager_io.html">imports/acme.cert-<wbr>manager.io</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/_ingress_.html">&quot;ingress&quot;</a>
+						<a href="modules/imports_cert_manager_io.html">imports/cert-<wbr>manager.io</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/_service_.html">&quot;service&quot;</a>
+						<a href="modules/imports_k8s.html">imports/k8s</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/index.html">index</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/ingress.html">ingress</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/service.html">service</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/serviceaccount.html">serviceaccount</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/utils.html">utils</a>
 					</li>
 				</ul>
 			</nav>
@@ -174,7 +250,10 @@ synth(buildChart);
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
 				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>

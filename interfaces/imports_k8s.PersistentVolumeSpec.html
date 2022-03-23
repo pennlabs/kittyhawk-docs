@@ -1,0 +1,852 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>PersistentVolumeSpec | @pennlabs/kittyhawk</title>
+	<meta name="description" content="Documentation for @pennlabs/kittyhawk">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">@pennlabs/kittyhawk</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">@pennlabs/kittyhawk</a>
+				</li>
+				<li>
+					<a href="../modules/imports_k8s.html">imports/k8s</a>
+				</li>
+				<li>
+					<a href="imports_k8s.PersistentVolumeSpec.html">PersistentVolumeSpec</a>
+				</li>
+			</ul>
+			<h1>Interface PersistentVolumeSpec</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>PersistentVolumeSpec is the specification of a persistent volume.</p>
+					</div>
+					<dl class="tsd-comment-tags">
+						<dt>schema</dt>
+						<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec</p>
+						</dd>
+					</dl>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">PersistentVolumeSpec</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#accessModes" class="tsd-kind-icon">access<wbr>Modes</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#awsElasticBlockStore" class="tsd-kind-icon">aws<wbr>Elastic<wbr>Block<wbr>Store</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#azureDisk" class="tsd-kind-icon">azure<wbr>Disk</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#azureFile" class="tsd-kind-icon">azure<wbr>File</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#capacity" class="tsd-kind-icon">capacity</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#cephfs" class="tsd-kind-icon">cephfs</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#cinder" class="tsd-kind-icon">cinder</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#claimRef" class="tsd-kind-icon">claim<wbr>Ref</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#csi" class="tsd-kind-icon">csi</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#fc" class="tsd-kind-icon">fc</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#flexVolume" class="tsd-kind-icon">flex<wbr>Volume</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#flocker" class="tsd-kind-icon">flocker</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#gcePersistentDisk" class="tsd-kind-icon">gce<wbr>Persistent<wbr>Disk</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#glusterfs" class="tsd-kind-icon">glusterfs</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#hostPath" class="tsd-kind-icon">host<wbr>Path</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#iscsi" class="tsd-kind-icon">iscsi</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#local" class="tsd-kind-icon">local</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#mountOptions" class="tsd-kind-icon">mount<wbr>Options</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#nfs" class="tsd-kind-icon">nfs</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#nodeAffinity" class="tsd-kind-icon">node<wbr>Affinity</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#persistentVolumeReclaimPolicy" class="tsd-kind-icon">persistent<wbr>Volume<wbr>Reclaim<wbr>Policy</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#photonPersistentDisk" class="tsd-kind-icon">photon<wbr>Persistent<wbr>Disk</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#portworxVolume" class="tsd-kind-icon">portworx<wbr>Volume</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#quobyte" class="tsd-kind-icon">quobyte</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#rbd" class="tsd-kind-icon">rbd</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#scaleIo" class="tsd-kind-icon">scale<wbr>Io</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#storageClassName" class="tsd-kind-icon">storage<wbr>Class<wbr>Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#storageos" class="tsd-kind-icon">storageos</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#volumeMode" class="tsd-kind-icon">volume<wbr>Mode</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imports_k8s.PersistentVolumeSpec.html#vsphereVolume" class="tsd-kind-icon">vsphere<wbr>Volume</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="accessModes" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> access<wbr>Modes</h3>
+					<div class="tsd-signature tsd-kind-icon">access<wbr>Modes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>AccessModes contains all ways the volume can be mounted. More info: <a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes">https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes</a></p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#accessModes</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="awsElasticBlockStore" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> aws<wbr>Elastic<wbr>Block<wbr>Store</h3>
+					<div class="tsd-signature tsd-kind-icon">aws<wbr>Elastic<wbr>Block<wbr>Store<span class="tsd-signature-symbol">:</span> <a href="imports_k8s.AwsElasticBlockStoreVolumeSource.html" class="tsd-signature-type" data-tsd-kind="Interface">AwsElasticBlockStoreVolumeSource</a></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: <a href="https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore">https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore</a></p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#awsElasticBlockStore</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="azureDisk" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> azure<wbr>Disk</h3>
+					<div class="tsd-signature tsd-kind-icon">azure<wbr>Disk<span class="tsd-signature-symbol">:</span> <a href="imports_k8s.AzureDiskVolumeSource.html" class="tsd-signature-type" data-tsd-kind="Interface">AzureDiskVolumeSource</a></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#azureDisk</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="azureFile" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> azure<wbr>File</h3>
+					<div class="tsd-signature tsd-kind-icon">azure<wbr>File<span class="tsd-signature-symbol">:</span> <a href="imports_k8s.AzureFilePersistentVolumeSource.html" class="tsd-signature-type" data-tsd-kind="Interface">AzureFilePersistentVolumeSource</a></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>AzureFile represents an Azure File Service mount on the host and bind mount to the pod.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#azureFile</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="capacity" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> capacity</h3>
+					<div class="tsd-signature tsd-kind-icon">capacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A description of the persistent volume&#39;s resources and capacity. More info: <a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity">https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity</a></p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#capacity</p>
+							</dd>
+						</dl>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-index-signature">
+								<h5><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><a href="../classes/imports_k8s.Quantity.html" class="tsd-signature-type" data-tsd-kind="Class">Quantity</a></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="cephfs" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> cephfs</h3>
+					<div class="tsd-signature tsd-kind-icon">cephfs<span class="tsd-signature-symbol">:</span> <a href="imports_k8s.CephFsPersistentVolumeSource.html" class="tsd-signature-type" data-tsd-kind="Interface">CephFsPersistentVolumeSource</a></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>CephFS represents a Ceph FS mount on the host that shares a pod&#39;s lifetime</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#cephfs</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="cinder" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> cinder</h3>
+					<div class="tsd-signature tsd-kind-icon">cinder<span class="tsd-signature-symbol">:</span> <a href="imports_k8s.CinderPersistentVolumeSource.html" class="tsd-signature-type" data-tsd-kind="Interface">CinderPersistentVolumeSource</a></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Cinder represents a cinder volume attached and mounted on kubelets host machine. More info: <a href="https://examples.k8s.io/mysql-cinder-pd/README.md">https://examples.k8s.io/mysql-cinder-pd/README.md</a></p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#cinder</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="claimRef" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> claim<wbr>Ref</h3>
+					<div class="tsd-signature tsd-kind-icon">claim<wbr>Ref<span class="tsd-signature-symbol">:</span> <a href="imports_k8s.ObjectReference.html" class="tsd-signature-type" data-tsd-kind="Interface">ObjectReference</a></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>ClaimRef is part of a bi-directional binding between PersistentVolume and PersistentVolumeClaim. Expected to be non-nil when bound. claim.VolumeName is the authoritative bind between PV and PVC. More info: <a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes#binding">https://kubernetes.io/docs/concepts/storage/persistent-volumes#binding</a></p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#claimRef</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="csi" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> csi</h3>
+					<div class="tsd-signature tsd-kind-icon">csi<span class="tsd-signature-symbol">:</span> <a href="imports_k8s.CsiPersistentVolumeSource.html" class="tsd-signature-type" data-tsd-kind="Interface">CsiPersistentVolumeSource</a></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>CSI represents storage that is handled by an external CSI driver (Beta feature).</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#csi</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="fc" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> fc</h3>
+					<div class="tsd-signature tsd-kind-icon">fc<span class="tsd-signature-symbol">:</span> <a href="imports_k8s.FcVolumeSource.html" class="tsd-signature-type" data-tsd-kind="Interface">FcVolumeSource</a></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>FC represents a Fibre Channel resource that is attached to a kubelet&#39;s host machine and then exposed to the pod.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#fc</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="flexVolume" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> flex<wbr>Volume</h3>
+					<div class="tsd-signature tsd-kind-icon">flex<wbr>Volume<span class="tsd-signature-symbol">:</span> <a href="imports_k8s.FlexPersistentVolumeSource.html" class="tsd-signature-type" data-tsd-kind="Interface">FlexPersistentVolumeSource</a></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>FlexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#flexVolume</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="flocker" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> flocker</h3>
+					<div class="tsd-signature tsd-kind-icon">flocker<span class="tsd-signature-symbol">:</span> <a href="imports_k8s.FlockerVolumeSource.html" class="tsd-signature-type" data-tsd-kind="Interface">FlockerVolumeSource</a></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Flocker represents a Flocker volume attached to a kubelet&#39;s host machine and exposed to the pod for its usage. This depends on the Flocker control service being running</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#flocker</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="gcePersistentDisk" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> gce<wbr>Persistent<wbr>Disk</h3>
+					<div class="tsd-signature tsd-kind-icon">gce<wbr>Persistent<wbr>Disk<span class="tsd-signature-symbol">:</span> <a href="imports_k8s.GcePersistentDiskVolumeSource.html" class="tsd-signature-type" data-tsd-kind="Interface">GcePersistentDiskVolumeSource</a></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. Provisioned by an admin. More info: <a href="https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk">https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk</a></p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#gcePersistentDisk</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="glusterfs" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> glusterfs</h3>
+					<div class="tsd-signature tsd-kind-icon">glusterfs<span class="tsd-signature-symbol">:</span> <a href="imports_k8s.GlusterfsPersistentVolumeSource.html" class="tsd-signature-type" data-tsd-kind="Interface">GlusterfsPersistentVolumeSource</a></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Glusterfs represents a Glusterfs volume that is attached to a host and exposed to the pod. Provisioned by an admin. More info: <a href="https://examples.k8s.io/volumes/glusterfs/README.md">https://examples.k8s.io/volumes/glusterfs/README.md</a></p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#glusterfs</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="hostPath" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> host<wbr>Path</h3>
+					<div class="tsd-signature tsd-kind-icon">host<wbr>Path<span class="tsd-signature-symbol">:</span> <a href="imports_k8s.HostPathVolumeSource.html" class="tsd-signature-type" data-tsd-kind="Interface">HostPathVolumeSource</a></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>HostPath represents a directory on the host. Provisioned by a developer or tester. This is useful for single-node development and testing only! On-host storage is not supported in any way and WILL NOT WORK in a multi-node cluster. More info: <a href="https://kubernetes.io/docs/concepts/storage/volumes#hostpath">https://kubernetes.io/docs/concepts/storage/volumes#hostpath</a></p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#hostPath</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="iscsi" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> iscsi</h3>
+					<div class="tsd-signature tsd-kind-icon">iscsi<span class="tsd-signature-symbol">:</span> <a href="imports_k8s.IscsiPersistentVolumeSource.html" class="tsd-signature-type" data-tsd-kind="Interface">IscsiPersistentVolumeSource</a></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>ISCSI represents an ISCSI Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. Provisioned by an admin.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#iscsi</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="local" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> local</h3>
+					<div class="tsd-signature tsd-kind-icon">local<span class="tsd-signature-symbol">:</span> <a href="imports_k8s.LocalVolumeSource.html" class="tsd-signature-type" data-tsd-kind="Interface">LocalVolumeSource</a></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Local represents directly-attached storage with node affinity</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#local</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="mountOptions" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> mount<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">mount<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of mount options, e.g. [&quot;ro&quot;, &quot;soft&quot;]. Not validated - mount will simply fail if one is invalid. More info: <a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/#mount-options">https://kubernetes.io/docs/concepts/storage/persistent-volumes/#mount-options</a></p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#mountOptions</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="nfs" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> nfs</h3>
+					<div class="tsd-signature tsd-kind-icon">nfs<span class="tsd-signature-symbol">:</span> <a href="imports_k8s.NfsVolumeSource.html" class="tsd-signature-type" data-tsd-kind="Interface">NfsVolumeSource</a></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>NFS represents an NFS mount on the host. Provisioned by an admin. More info: <a href="https://kubernetes.io/docs/concepts/storage/volumes#nfs">https://kubernetes.io/docs/concepts/storage/volumes#nfs</a></p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#nfs</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="nodeAffinity" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> node<wbr>Affinity</h3>
+					<div class="tsd-signature tsd-kind-icon">node<wbr>Affinity<span class="tsd-signature-symbol">:</span> <a href="imports_k8s.VolumeNodeAffinity.html" class="tsd-signature-type" data-tsd-kind="Interface">VolumeNodeAffinity</a></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>NodeAffinity defines constraints that limit what nodes this volume can be accessed from. This field influences the scheduling of pods that use this volume.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#nodeAffinity</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="persistentVolumeReclaimPolicy" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> persistent<wbr>Volume<wbr>Reclaim<wbr>Policy</h3>
+					<div class="tsd-signature tsd-kind-icon">persistent<wbr>Volume<wbr>Reclaim<wbr>Policy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>What happens to a persistent volume when released from its claim. Valid options are Retain (default for manually created PersistentVolumes), Delete (default for dynamically provisioned PersistentVolumes), and Recycle (deprecated). Recycle must be supported by the volume plugin underlying this PersistentVolume. More info: <a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes#reclaiming">https://kubernetes.io/docs/concepts/storage/persistent-volumes#reclaiming</a></p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#persistentVolumeReclaimPolicy</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="photonPersistentDisk" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> photon<wbr>Persistent<wbr>Disk</h3>
+					<div class="tsd-signature tsd-kind-icon">photon<wbr>Persistent<wbr>Disk<span class="tsd-signature-symbol">:</span> <a href="imports_k8s.PhotonPersistentDiskVolumeSource.html" class="tsd-signature-type" data-tsd-kind="Interface">PhotonPersistentDiskVolumeSource</a></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>PhotonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#photonPersistentDisk</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="portworxVolume" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> portworx<wbr>Volume</h3>
+					<div class="tsd-signature tsd-kind-icon">portworx<wbr>Volume<span class="tsd-signature-symbol">:</span> <a href="imports_k8s.PortworxVolumeSource.html" class="tsd-signature-type" data-tsd-kind="Interface">PortworxVolumeSource</a></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>PortworxVolume represents a portworx volume attached and mounted on kubelets host machine</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#portworxVolume</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="quobyte" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> quobyte</h3>
+					<div class="tsd-signature tsd-kind-icon">quobyte<span class="tsd-signature-symbol">:</span> <a href="imports_k8s.QuobyteVolumeSource.html" class="tsd-signature-type" data-tsd-kind="Interface">QuobyteVolumeSource</a></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Quobyte represents a Quobyte mount on the host that shares a pod&#39;s lifetime</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#quobyte</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="rbd" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> rbd</h3>
+					<div class="tsd-signature tsd-kind-icon">rbd<span class="tsd-signature-symbol">:</span> <a href="imports_k8s.RbdPersistentVolumeSource.html" class="tsd-signature-type" data-tsd-kind="Interface">RbdPersistentVolumeSource</a></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>RBD represents a Rados Block Device mount on the host that shares a pod&#39;s lifetime. More info: <a href="https://examples.k8s.io/volumes/rbd/README.md">https://examples.k8s.io/volumes/rbd/README.md</a></p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#rbd</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="scaleIo" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> scale<wbr>Io</h3>
+					<div class="tsd-signature tsd-kind-icon">scale<wbr>Io<span class="tsd-signature-symbol">:</span> <a href="imports_k8s.ScaleIoPersistentVolumeSource.html" class="tsd-signature-type" data-tsd-kind="Interface">ScaleIoPersistentVolumeSource</a></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>ScaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#scaleIO</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="storageClassName" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> storage<wbr>Class<wbr>Name</h3>
+					<div class="tsd-signature tsd-kind-icon">storage<wbr>Class<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Name of StorageClass to which this persistent volume belongs. Empty value means that this volume does not belong to any StorageClass.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#storageClassName</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="storageos" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> storageos</h3>
+					<div class="tsd-signature tsd-kind-icon">storageos<span class="tsd-signature-symbol">:</span> <a href="imports_k8s.StorageOsPersistentVolumeSource.html" class="tsd-signature-type" data-tsd-kind="Interface">StorageOsPersistentVolumeSource</a></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>StorageOS represents a StorageOS volume that is attached to the kubelet&#39;s host machine and mounted into the pod More info: <a href="https://examples.k8s.io/volumes/storageos/README.md">https://examples.k8s.io/volumes/storageos/README.md</a></p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#storageos</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="volumeMode" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> volume<wbr>Mode</h3>
+					<div class="tsd-signature tsd-kind-icon">volume<wbr>Mode<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>volumeMode defines if a volume is intended to be used with a formatted filesystem or to remain in raw block state. Value of Filesystem is implied when not included in spec.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#volumeMode</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="vsphereVolume" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> vsphere<wbr>Volume</h3>
+					<div class="tsd-signature tsd-kind-icon">vsphere<wbr>Volume<span class="tsd-signature-symbol">:</span> <a href="imports_k8s.VsphereVirtualDiskVolumeSource.html" class="tsd-signature-type" data-tsd-kind="Interface">VsphereVirtualDiskVolumeSource</a></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>VsphereVolume represents a vSphere volume attached and mounted on kubelets host machine</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>schema</dt>
+							<dd><p>io.k8s.api.core.v1.PersistentVolumeSpec#vsphereVolume</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Modules</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/application.html">application</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/application_base.html">application/base</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/application_django.html">application/django</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/application_react.html">application/react</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/application_redis.html">application/redis</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/certificate.html">certificate</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/chart.html">chart</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/container.html">container</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/cronjob.html">cronjob</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/deployment.html">deployment</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/imports_acme_cert_manager_io.html">imports/acme.cert-<wbr>manager.io</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/imports_cert_manager_io.html">imports/cert-<wbr>manager.io</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/imports_k8s.html">imports/k8s</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/index.html">index</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/ingress.html">ingress</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/service.html">service</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/serviceaccount.html">serviceaccount</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/utils.html">utils</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-module">
+						<a href="imports_k8s.PersistentVolumeSpec.html" class="tsd-kind-icon">Persistent<wbr>Volume<wbr>Spec</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#accessModes" class="tsd-kind-icon">access<wbr>Modes</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#awsElasticBlockStore" class="tsd-kind-icon">aws<wbr>Elastic<wbr>Block<wbr>Store</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#azureDisk" class="tsd-kind-icon">azure<wbr>Disk</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#azureFile" class="tsd-kind-icon">azure<wbr>File</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#capacity" class="tsd-kind-icon">capacity</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#cephfs" class="tsd-kind-icon">cephfs</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#cinder" class="tsd-kind-icon">cinder</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#claimRef" class="tsd-kind-icon">claim<wbr>Ref</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#csi" class="tsd-kind-icon">csi</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#fc" class="tsd-kind-icon">fc</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#flexVolume" class="tsd-kind-icon">flex<wbr>Volume</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#flocker" class="tsd-kind-icon">flocker</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#gcePersistentDisk" class="tsd-kind-icon">gce<wbr>Persistent<wbr>Disk</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#glusterfs" class="tsd-kind-icon">glusterfs</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#hostPath" class="tsd-kind-icon">host<wbr>Path</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#iscsi" class="tsd-kind-icon">iscsi</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#local" class="tsd-kind-icon">local</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#mountOptions" class="tsd-kind-icon">mount<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#nfs" class="tsd-kind-icon">nfs</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#nodeAffinity" class="tsd-kind-icon">node<wbr>Affinity</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#persistentVolumeReclaimPolicy" class="tsd-kind-icon">persistent<wbr>Volume<wbr>Reclaim<wbr>Policy</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#photonPersistentDisk" class="tsd-kind-icon">photon<wbr>Persistent<wbr>Disk</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#portworxVolume" class="tsd-kind-icon">portworx<wbr>Volume</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#quobyte" class="tsd-kind-icon">quobyte</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#rbd" class="tsd-kind-icon">rbd</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#scaleIo" class="tsd-kind-icon">scale<wbr>Io</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#storageClassName" class="tsd-kind-icon">storage<wbr>Class<wbr>Name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#storageos" class="tsd-kind-icon">storageos</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#volumeMode" class="tsd-kind-icon">volume<wbr>Mode</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imports_k8s.PersistentVolumeSpec.html#vsphereVolume" class="tsd-kind-icon">vsphere<wbr>Volume</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
