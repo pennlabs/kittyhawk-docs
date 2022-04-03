@@ -112,6 +112,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="imports_k8s.KubeTokenRequest.html#kind" class="tsd-kind-icon">kind</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="imports_k8s.KubeTokenRequest.html#metadata" class="tsd-kind-icon">metadata</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="imports_k8s.KubeTokenRequest.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="imports_k8s.KubeTokenRequest.html#node" class="tsd-kind-icon">node</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="imports_k8s.KubeTokenRequest.html#GVK" class="tsd-kind-icon">GVK</a></li>
 							</ul>
 						</section>
@@ -120,11 +121,9 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="imports_k8s.KubeTokenRequest.html#addDependency" class="tsd-kind-icon">add<wbr>Dependency</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="imports_k8s.KubeTokenRequest.html#addJsonPatch" class="tsd-kind-icon">add<wbr>Json<wbr>Patch</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-external"><a href="imports_k8s.KubeTokenRequest.html#onPrepare" class="tsd-kind-icon">on<wbr>Prepare</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-external"><a href="imports_k8s.KubeTokenRequest.html#onSynthesize" class="tsd-kind-icon">on<wbr>Synthesize</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-external"><a href="imports_k8s.KubeTokenRequest.html#onValidate" class="tsd-kind-icon">on<wbr>Validate</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="imports_k8s.KubeTokenRequest.html#toJson" class="tsd-kind-icon">to<wbr>Json</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="imports_k8s.KubeTokenRequest.html#toString" class="tsd-kind-icon">to<wbr>String</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external"><a href="imports_k8s.KubeTokenRequest.html#isConstruct" class="tsd-kind-icon">is<wbr>Construct</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="imports_k8s.KubeTokenRequest.html#manifest" class="tsd-kind-icon">manifest</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external"><a href="imports_k8s.KubeTokenRequest.html#of" class="tsd-kind-icon">of</a></li>
 							</ul>
@@ -266,6 +265,19 @@
 						construct path to generate a DNS-compatible name for the resource.</p>
 					</div>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+					<a name="node" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> node</h3>
+					<div class="tsd-signature tsd-kind-icon">node<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Node</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from ApiObject.node</p>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The tree node.</p>
+						</div>
+					</div>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="GVK" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> GVK</h3>
@@ -346,101 +358,6 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-external">
-					<a name="onPrepare" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> on<wbr>Prepare</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">on<wbr>Prepare<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Inherited from ApiObject.onPrepare</p>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Perform final modifications before synthesis.</p>
-								</div>
-								<p>This method can be implemented by derived constructs in order to perform
-									final changes before synthesis. prepare() will be called after child
-								constructs have been prepared.</p>
-								<p>This is an advanced framework feature. Only use this if you
-								understand the implications.</p>
-								<dl class="tsd-comment-tags">
-									<dt>stability</dt>
-									<dd><p>stable</p>
-									</dd>
-								</dl>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-external">
-					<a name="onSynthesize" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> on<wbr>Synthesize</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">on<wbr>Synthesize<span class="tsd-signature-symbol">(</span>session<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ISynthesisSession</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Inherited from ApiObject.onSynthesize</p>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Allows this construct to emit artifacts into the cloud assembly during synthesis.</p>
-								</div>
-								<p>This method is usually implemented by framework-level constructs such as <code>Stack</code> and <code>Asset</code>
-								as they participate in synthesizing the cloud assembly.</p>
-								<dl class="tsd-comment-tags">
-									<dt>stability</dt>
-									<dd><p>stable</p>
-									</dd>
-								</dl>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>session: <span class="tsd-signature-type">ISynthesisSession</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The synthesis session.</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-external">
-					<a name="onValidate" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> on<wbr>Validate</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">on<wbr>Validate<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Inherited from ApiObject.onValidate</p>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>(deprecated) Validate the current construct.</p>
-								</div>
-								<p>This method can be implemented by derived constructs in order to perform
-								validation logic. It is called on all constructs before synthesis.</p>
-								<dl class="tsd-comment-tags">
-									<dt>deprecated</dt>
-									<dd><p>use <code>Node.addValidation()</code> to subscribe validation functions on this construct
-										instead of overriding this method.</p>
-									</dd>
-								</dl>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4>
-							<p>An array of validation error messages, or an empty array if there the construct is valid.</p>
-						</li>
-					</ul>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 					<a name="toJson" class="tsd-anchor"></a>
 					<h3>to<wbr>Json</h3>
@@ -476,13 +393,50 @@
 								<div class="lead">
 									<p>Returns a string representation of this construct.</p>
 								</div>
-								<dl class="tsd-comment-tags">
-									<dt>stability</dt>
-									<dd><p>stable</p>
-									</dd>
-								</dl>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external">
+					<a name="isConstruct" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> is<wbr>Construct</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Construct<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">x</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Construct</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from ApiObject.isConstruct</p>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks if <code>x</code> is a construct.</p>
+								</div>
+								<p>Use this method instead of <code>instanceof</code> to properly detect <code>Construct</code>
+								instances, even when the construct library is symlinked.</p>
+								<p>Explanation: in JavaScript, multiple copies of the <code>constructs</code> library on
+									disk are seen as independent, completely different libraries. As a
+									consequence, the class <code>Construct</code> in each copy of the <code>constructs</code> library
+									is seen as a different class, and an instance of one class will not test as
+									<code>instanceof</code> the other class. <code>npm install</code> will not create installations
+									like this, but users may manually symlink construct libraries together or
+									use a monorepo tool: in those cases, multiple copies of the <code>constructs</code>
+									library can be accidentally installed, and <code>instanceof</code> will behave
+									unpredictably. It is safest to avoid using <code>instanceof</code>, and using
+								this type-testing method instead.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>x: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Any object</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">x</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Construct</span></h4>
+							<p>true if <code>x</code> is an object created from a class which extends <code>Construct</code>.</p>
 						</li>
 					</ul>
 				</section>
@@ -639,6 +593,9 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
 								<a href="imports_k8s.KubeTokenRequest.html#name" class="tsd-kind-icon">name</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+								<a href="imports_k8s.KubeTokenRequest.html#node" class="tsd-kind-icon">node</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
 								<a href="imports_k8s.KubeTokenRequest.html#GVK" class="tsd-kind-icon">GVK</a>
 							</li>
@@ -648,20 +605,14 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
 								<a href="imports_k8s.KubeTokenRequest.html#addJsonPatch" class="tsd-kind-icon">add<wbr>Json<wbr>Patch</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-external">
-								<a href="imports_k8s.KubeTokenRequest.html#onPrepare" class="tsd-kind-icon">on<wbr>Prepare</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-external">
-								<a href="imports_k8s.KubeTokenRequest.html#onSynthesize" class="tsd-kind-icon">on<wbr>Synthesize</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-external">
-								<a href="imports_k8s.KubeTokenRequest.html#onValidate" class="tsd-kind-icon">on<wbr>Validate</a>
-							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 								<a href="imports_k8s.KubeTokenRequest.html#toJson" class="tsd-kind-icon">to<wbr>Json</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
 								<a href="imports_k8s.KubeTokenRequest.html#toString" class="tsd-kind-icon">to<wbr>String</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external">
+								<a href="imports_k8s.KubeTokenRequest.html#isConstruct" class="tsd-kind-icon">is<wbr>Construct</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="imports_k8s.KubeTokenRequest.html#manifest" class="tsd-kind-icon">manifest</a>
